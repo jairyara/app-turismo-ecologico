@@ -1,0 +1,34 @@
+.login {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 320px;
+
+  img {
+    display: flex;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    object-position: bottom;
+    object-fit: cover;
+    border-radius: 50px;
+    border: none;
+  }
+
+  &__title {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    label,input {
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 5px 10px;
+    }
+  }
+}

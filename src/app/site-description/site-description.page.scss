@@ -1,0 +1,30 @@
+.articleSite {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 320px;
+
+  &__image {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ion-title {
+      text-align: left;
+      padding: 0;
+    }
+
+    ion-icon {
+      padding: 0;
+    }
+  }
+
+  &__description {
+    padding: 0;
+    text-align: left;
+  }
+}
