@@ -10,11 +10,11 @@ export class Place {
 
   constructor(placeArray: any) {
     this._id = placeArray['_id'];
-    this._name = placeArray.name;
-    this._desc = placeArray.desc;
-    this._long = placeArray.long;
-    this._lat = placeArray.lat;
-    this._imageUrl = placeArray.imageUrl;
+    this._name = placeArray.name ?? placeArray._name;
+    this._desc = placeArray.desc ?? placeArray._desc;
+    this._long = placeArray.long ?? placeArray._long;
+    this._lat = placeArray.lat ?? placeArray._lat;
+    this._imageUrl = placeArray.imageUrl ?? placeArray._imageUrl;
   }
 
   get id(): string {

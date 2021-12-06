@@ -13,12 +13,11 @@
              src="{{place.imageUrl}}"></ion-img>
     <section class="articleSite__title">
       <ion-title>{{place.name}}</ion-title>
-      <ion-icon name="heart-outline"></ion-icon>
+      <ion-icon (click)="save()" name="heart-outline"></ion-icon>
     </section>
     <ion-text class="articleSite__description">{{place.desc}}</ion-text>
     <iframe *ngIf="place !== null"
             [src]="maps"
-            height="450" width="600"></iframe>
-    <p>https://maps.google.com/maps?q={{place.long}},{{place.lat}}&output=embed</p>
+            height="450" width="100%"></iframe>
   </ion-infinite-scroll-content>
 </ion-content>

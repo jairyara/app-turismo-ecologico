@@ -27,4 +27,13 @@ export class SiteDescriptionPage implements OnInit {
     });
   }
 
+  save() {
+    if (localStorage.places == null || localStorage.places === '') {
+      localStorage.places = JSON.stringify([]);
+    }
+
+    const stored = JSON.parse(localStorage.places);
+    stored.push(this.place);
+    localStorage.places = JSON.stringify(stored);
+  }
 }
