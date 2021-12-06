@@ -8,9 +8,7 @@
 
 <ion-content [fullscreen]="true">
   <section class="sites">
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
+    <app-card *ngFor="let x of places" [place]="x"></app-card>
   </section>
 
 </ion-content>

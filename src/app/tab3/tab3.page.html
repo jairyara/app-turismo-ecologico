@@ -7,5 +7,28 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-profile></app-profile>
+  <article class="profile">
+    <h2 class="profile__title">Mis datos</h2>
+    <!--    <form (ngSubmit)="update()" [formGroup]="data" class="profile__content" >-->
+    <!--      <ion-item>-->
+    <!--        <ion-input type="text" placeholder="Nombre" formControlName="id"></ion-input>-->
+    <!--      </ion-item>-->
+    <!--      <ion-item>-->
+    <!--        <ion-input type="text" placeholder="Nombre" formControlName="name"></ion-input>-->
+    <!--      </ion-item>-->
+    <!--      <ion-item>-->
+    <!--        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>-->
+    <!--      </ion-item>-->
+    <!--      <ion-button type="submit" expand="block">Actualizar</ion-button>-->
+    <!--    </form>-->
+    <form class="profile__content">
+      <!--      <label class="profile__content&#45;&#45;title" for="id">Id</label>-->
+      <!--      <input class="profile__content&#45;&#45;item" type="text" name="id" id="id" value="{{id}}" required/>-->
+      <label class="profile__content--title" for="name">Nombre</label>
+      <input class="profile__content--item" id="name" name="name" required type="text" value="{{name}}"/>
+      <label class="profile__content--title" for="mail">Correo</label>
+      <input class="profile__content--item" id="mail" name="mail" required type="email" value="{{email}}">
+      <ion-button>Actualizar</ion-button>
+    </form>
+  </article>
 </ion-content>

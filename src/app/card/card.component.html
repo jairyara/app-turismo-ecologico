@@ -1,13 +1,14 @@
-<article class="card" routerLink="/site-description">
+<article class="card" routerLink="/site-description/{{place.id}}">
   <figure class="card__figure">
-    <img class="card__figure--img" src="https://images.pexels.com/photos/9824365/pexels-photo-9824365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    <img class="card__figure--img" src="{{place.imageUrl}}"
          alt="Imagen">
   </figure>
   <section class="card__content">
-    <p class="card__content--title">Monserrate</p>
+    <p>id: {{place.id}}</p>
+    <p class="card__content--title">{{place.name}}</p>
     <div class="card__content--location">
       <ion-icon name="location"></ion-icon>
-      <p>Bogotá</p>
+      <p>{{place.lat}}, {{place.long}}</p>
     </div>
   </section>
 </article>

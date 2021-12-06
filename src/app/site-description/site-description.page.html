@@ -3,21 +3,22 @@
     <ion-buttons slot="start">
       <ion-back-button icon="chevron-back-outline"></ion-back-button>
     </ion-buttons>
-    <ion-title >Monserrate</ion-title>
+    <ion-title>{{place !== null ? place.name : 'Cargando'}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-infinite-scroll-content class="articleSite">
+  <ion-infinite-scroll-content *ngIf="place !== null" class="articleSite">
     <ion-img class="articleSite__image"
-      src="https://images.pexels.com/photos/9824365/pexels-photo-9824365.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"></ion-img>
+             src="{{place.imageUrl}}"></ion-img>
     <section class="articleSite__title">
-      <ion-title>Monserrate</ion-title>
+      <ion-title>{{place.name}}</ion-title>
       <ion-icon name="heart-outline"></ion-icon>
     </section>
-    <ion-text class="articleSite__description">
-      El cerro de Monserrate es el más conocido de los cerros Orientales de Bogotá. Junto a Guadalupe es uno de los
-      cerros tutelares de la ciudad. Monserrate tiene una altitud de 3152 m y se ubica sobre la cordillera oriental
-    </ion-text>
+    <ion-text class="articleSite__description">{{place.desc}}</ion-text>
+    <iframe *ngIf="place !== null"
+            [src]="maps"
+            height="450" width="600"></iframe>
+    <p>https://maps.google.com/maps?q={{place.long}},{{place.lat}}&output=embed</p>
   </ion-infinite-scroll-content>
 </ion-content>
